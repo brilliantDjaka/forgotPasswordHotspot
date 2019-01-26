@@ -59,7 +59,7 @@ if ($conn->connect_error) {
       $email->setSubject("RESET PASSWORD");
       $email->addTo($emailUser, $emailUser);
       $email->addContent("text/html", "<html><p>RESET USER PASSWORD INTERNER SMK TELKOM MALANG BERHASIL.<br>Password Anda Adalah : <b>" . $newPass . "</b>.<br> Terimakasih<br>Sarpra.</p></html>");
-      $sendgrid = new \SendGrid('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');
+      $sendgrid = new \SendGrid('');
       try {
         $response = $sendgrid->send($email);
        // print $response->statusCode() . "\n";
